@@ -57,7 +57,7 @@ else {
   console.log('The users answer to question 5 was ' + answerFive + ' and was incorrect.');
 }
 
-document.getElementById('score').innerHTML = 'You scored a ' + score + '!';
+document.getElementById('score').innerHTML = 'You scored a ' + score + 'out of 5!';
 
 alert('Now try to guess my secret number! It is a whole number between 0 and 30!');
 var answerSix = '24';
@@ -88,5 +88,52 @@ while (guessing === true) {
   }
   else {
     alert('That was not a valid guess, try again. I won\'t count that against your 4 attempts.');
+  }
+}
+
+alert('Now you have 6 tries to guess one of my favorite foods!');
+
+var answerSeven = ['steak', 'pizza', 'beer', 'teriyaki', 'cheese'];
+var guessingTwo = true;
+var counterTwo = 1;
+
+while (guessingTwo === true) {
+  var userAnswerSeven = prompt('This is your ' + counterTwo + ' guess. Enter your guess: ');
+  toString(userAnswerSeven);
+  consolelog('Guess number: ' + counterTwo + '. User guess: ' + userAnswerSeven);
+
+  if (userAnswerSeven === answerSeven[0]) {
+    alert('That is a correct answer!');
+    alert('My favorite foods are: ' + answerSeven.toString());
+    guessingTwo = false;
+  }
+  else if (userAnswerSeven === answerSeven[1]) {
+    alert('That is a correct answer!');
+    alert('My favorite foods are: ' + answerSeven.toString());
+    guessingTwo = false;
+  }
+  else if (userAnswerSeven === answerSeven[2]) {
+    alert('That is a correct answer!');
+    alert('My favorite foods are: ' + answerSeven.toString());
+    guessingTwo = false;
+  }
+  else if (userAnswerSeven === answerSeven[3]) {
+    alert('That is a correct answer!');
+    alert('My favorite foods are: ' + answerSeven.toString());
+    guessingTwo = false;
+  }
+  else if (userAnswerSeven === answerSeven[4]) {
+    alert('That is a correct answer!');
+    alert('My favorite foods are: ' + answerSeven.toString());
+    guessingTwo = false;
+  }
+  else {
+    alert('That is not a correct answer!');
+    counterTwo++;
+    if (counterTwo > 5) {
+      alert('Sorry you are out of guesses!');
+      alert('My favorite foods: ' + answerSeven.toString());
+      guessingTwo = false;
+    }
   }
 }
