@@ -58,3 +58,35 @@ else {
 }
 
 document.getElementById('score').innerHTML = 'You scored a ' + score + '!';
+
+alert('Now try to guess my secret number! It is a whole number between 0 and 30!');
+var answerSix = '24';
+var guessing = true;
+var guessingCounter = 1;
+
+while (guessing === true) {
+  var userAnswer = prompt('This is your ' + guessingCounter + ' guess. Please enter a number between 0 and 30: ' );
+  toString(userAnswer);
+  console.log('This is guess ' + guessingCounter + 'And the user answer is: ' + userAnswer);
+  if (userAnswer === answerSix) {
+    alert('Correct! It took you ' + guessingCounter + ' tries!');
+    guessing = false;
+  }
+  else if (userAnswer < answerSix && userAnswer >= 0) {
+    alert('Incorrect, guess higher! That was your ' + guessingCounter + ' guess.');
+    guessingCounter++;
+    if (guessingCounter > 3) {
+      guessing = false;
+    }
+  }
+  else if (userAnswer > answerSix && userAnswer <= 30) {
+    alert('Incorrect, guess lower! That was your ' + guessingCounter + ' guess.');
+    guessingCounter++;
+    if (guessingCounter > 3) {
+      guessing = false;
+    }
+  }
+  else {
+    alert('That was not a valid guess, try again. I won\'t count that against your 4 attempts.');
+  }
+}
