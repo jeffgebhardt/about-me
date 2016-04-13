@@ -57,8 +57,6 @@ else {
   console.log('The users answer to question 5 was ' + answerFive + ' and was incorrect.');
 }
 
-document.getElementById('score').innerHTML = 'You scored a ' + score + 'out of 5!';
-
 alert('Now try to guess my secret number! It is a whole number between 0 and 30!');
 var answerSix = '24';
 var guessing = true;
@@ -67,9 +65,11 @@ var guessingCounter = 1;
 while (guessing === true) {
   var userAnswer = prompt('This is your ' + guessingCounter + ' guess. Please enter a number between 0 and 30: ' );
   toString(userAnswer);
-  console.log('This is guess ' + guessingCounter + 'And the user answer is: ' + userAnswer);
+  console.log('This is guess ' + guessingCounter + ' and the user answer is: ' + userAnswer);
   if (userAnswer === answerSix) {
     alert('Correct! It took you ' + guessingCounter + ' tries!');
+    document.getElementById('questionSix').innerHTML = 'Correct, + 1 score!';
+    score++;
     guessing = false;
   }
   else if (userAnswer < answerSix && userAnswer >= 0) {
@@ -83,6 +83,7 @@ while (guessing === true) {
     alert('Incorrect, guess lower! That was your ' + guessingCounter + ' guess.');
     guessingCounter++;
     if (guessingCounter > 3) {
+      document.getElementById('questionSix').innerHTML = 'No, that was incorrect.';
       guessing = false;
     }
   }
@@ -99,32 +100,41 @@ var counterTwo = 1;
 
 while (guessingTwo === true) {
   var userAnswerSeven = prompt('This is your ' + counterTwo + ' guess. Enter your guess: ');
-  toString(userAnswerSeven);
-  consolelog('Guess number: ' + counterTwo + '. User guess: ' + userAnswerSeven);
+  toString(userAnswerSeven).toLowerCase();
+  console.log('This is guess number: ' + counterTwo + ' and the users guess: ' + userAnswerSeven);
 
   if (userAnswerSeven === answerSeven[0]) {
     alert('That is a correct answer!');
     alert('My favorite foods are: ' + answerSeven.toString());
+    document.getElementById('questionSeven').innerHTML = 'Correct, + 1 score!';
+    score++;
     guessingTwo = false;
   }
   else if (userAnswerSeven === answerSeven[1]) {
     alert('That is a correct answer!');
     alert('My favorite foods are: ' + answerSeven.toString());
+    document.getElementById('questionSeven').innerHTML = 'Correct, + 1 score!';
+    score++;
     guessingTwo = false;
   }
   else if (userAnswerSeven === answerSeven[2]) {
     alert('That is a correct answer!');
     alert('My favorite foods are: ' + answerSeven.toString());
+    document.getElementById('questionSeven').innerHTML = 'Correct, + 1 score!';
+    score++;
     guessingTwo = false;
   }
   else if (userAnswerSeven === answerSeven[3]) {
     alert('That is a correct answer!');
     alert('My favorite foods are: ' + answerSeven.toString());
+    document.getElementById('questionSeven').innerHTML = 'Correct, + 1 score!';
     guessingTwo = false;
   }
   else if (userAnswerSeven === answerSeven[4]) {
     alert('That is a correct answer!');
     alert('My favorite foods are: ' + answerSeven.toString());
+    document.getElementById('questionSeven').innerHTML = 'Correct, + 1 score!';
+    score++;
     guessingTwo = false;
   }
   else {
@@ -133,7 +143,12 @@ while (guessingTwo === true) {
     if (counterTwo > 5) {
       alert('Sorry you are out of guesses!');
       alert('My favorite foods: ' + answerSeven.toString());
+      document.getElementById('questionSeven').innerHTML = 'No, that was incorrect.';
       guessingTwo = false;
     }
   }
 }
+
+var userName = prompt('What is your name?').toString();
+alert(userName + ', you scored a ' + score + ' out of 7! I\'ve seen better');
+document.getElementById('score').innerHTML = 'You scored a ' + score + '  out of 7!';
