@@ -1,5 +1,5 @@
 # About Me
-Code-201: Personal profile page with guessing game.
+Code-201: Personal profile page with guessing game updated by pair programming.
 
-These are not the droids your looking for. #WavesHand
-Test Test Test
+Driver: Vien Ly
+Navigator: Jeff Gebhardt
