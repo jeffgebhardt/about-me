@@ -1,9 +1,18 @@
+body {
+  background-color: gray;
+  width: auto;
+}
+
 h1 {
   color: blue;
-  border-bottom: 2px dashed blue;
+  border: 2px dashed blue;
+  width: 200px;
+  padding: 10px;
 }
 
 h2 {
   color: blue;
-  border-bottom: 2px dashed blue;
+  border: 2px dashed blue;
+  width: 200px;
+  padding: 10px;
 }
