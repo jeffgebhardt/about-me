@@ -1,18 +1,54 @@
+* {
+  font-family: 'Montserrat', serif;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-image: url('images/mountains.png');
+}
+
+#content-wrapper{
+  padding-left: 10px;
+}
+
 body {
   background-color: gray;
   width: auto;
+  text-align: center;
 }
 
 h1 {
   color: blue;
-  border: 2px dashed blue;
-  width: 200px;
+  background-color: black;
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
   padding: 10px;
 }
 
 h2 {
   color: blue;
-  border: 2px dashed blue;
-  width: 200px;
+  background-color: black;
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
   padding: 10px;
+}
+
+ul.default {
+  /*border-top: : 4px solid blue;*/
+  border-left: 4px solid blue;
+  color: white;
+}
+
+ol.default {
+  /*border-top: : 4px solid blue;*/
+  border-left: 4px solid blue;
+  color: white;
+}
+
+p {
+  color: white;
 }

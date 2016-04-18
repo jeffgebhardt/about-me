@@ -5,23 +5,30 @@
   <meta charset="utf-8">
   <title>About Me - Jeff Gebhardt</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
+<div id="container">
   <body>
     <h1>About Me</h1>
+    <div id="content-wrapper">
     <p>Hello my name is Jeff. Aspiring developer, veteran and adventurer.</p>
+    </div>
     <br>
 
     <h2>Experience</h2>
-    <ul>
+    <div id="content-wrapper">
+    <ul class="default">
       <li>Lots of school...</li>
       <li>Military, pew, pew</li>
       <li>Corporate IT</li>
     </ul>
+    </div>
     <br>
 
     <h2>14 8000m peaks</h2>
-    <ol>
+    <div id="content-wrapper">
+    <ol class="default">
       <li>Everest - 8848</li>
       <li>K2 - 8611</li>
       <li>Kangchenjuna - 8586</li>
@@ -37,10 +44,11 @@
       <li>Gasherbrum 2 - 8035</li>
       <li>Shishapangma - 8027</li>
     </ol>
+  </div>
 
     <h2>Your answers: </h1>
-
-    <ol>
+    <div id="content-wrapper">
+    <ol class="default">
       <li id="question0"></li>
       <li id="question1"></li>
       <li id="question2"></li>
@@ -49,11 +57,13 @@
       <li id="question5"></li>
       <li id="question6"></li>
     </ol>
+  </div>
 
     <br>
 
     <h3 id="score"></h3>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
   </body>
+</div>
 
 </html>
